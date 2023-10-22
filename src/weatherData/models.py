@@ -11,7 +11,9 @@ class WeatherData(models.Model):
     cloud_cover = models.FloatField()  # Cloud cover percentage
     visibility = models.FloatField()  # Visibility in meters
     weather_desc = models.CharField(max_length=255)
-    icon = models.CharField(max_length=10,)
+    icon = models.CharField(
+        max_length=10,
+    )
     forecast_data = models.JSONField(null=False, default=None)
 
     def __str__(self):
