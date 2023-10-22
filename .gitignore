@@ -15,7 +15,6 @@ src/frontend/node_modules/
 /coverage
 
 # production
-/build
 
 # misc
 .DS_Store
