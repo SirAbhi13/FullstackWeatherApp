@@ -10,4 +10,4 @@ urlpatterns = [
     ),
 ]
 
-start_jobs()
+# start_jobs()
