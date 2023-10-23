@@ -27,7 +27,7 @@ base_url = "https://api.openweathermap.org/data/2.5"
 class FetchAndStoreWeatherData(APIView):
     def get(self, request, location):
         try:
-            weather_data = WeatherData.objects.get(location=location)
+            weather_data = WeatherData.objects.get(location=location).first()
             serializer = WeatherDataSerializer(weather_data)
             return Response(serializer.data)
         except WeatherData.DoesNotExist:
