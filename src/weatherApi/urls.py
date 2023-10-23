@@ -1,5 +1,5 @@
 from django.urls import path
-
+from scheduler import start_jobs
 from weatherApi.views import FetchAndStoreWeatherData
 
 urlpatterns = [
@@ -9,3 +9,5 @@ urlpatterns = [
         name="weather-data",
     ),
 ]
+
+start_jobs()
